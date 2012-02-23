@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!-- Name of the context. Very handy to avoid log hijacking -->
+    <contextName>twitter-service</contextName>
+
+    <!-- Enable JMX configuration -->
+    <jmxConfigurator/>
+
+    <property name="logLevel" type="java.lang.String"/>
+    <property name="thirdPartyLevel" value="INFO"/>
+    <property name="logBaseDir" value="target/logs"/>
+
+    <!-- Get logging levels from JNDI. There is a default for this in case none is defined. -->
+    <insertFromJNDI env-entry-name="param/logging/level" as="logLevel"/>
+    <insertFromJNDI env-entry-name="param/logging/thirdPartyLevel" as="thirdPartyLogLevel"/>
+    <insertFromJNDI env-entry-name="param/logging/baseDir" as="logBaseDir"/>
+
+    <!-- Defines the format for log entries. -->
+    <property name="logEntryFormat" value="%-12date{HH:mm:ss.SSS}  %-5level  %-40logger{40} -> %msg%n"/>
+    <property name="logBase" value="${logBaseDir}/${application.name}"/>
+
+    <!-- com.dynacrongroup.* log file -->
+    <property name="logFileBase" value="${logBase}/application"/>
+    <appender name="applicationAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logFileBase}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Log will rollover nightly (at midnight) -->
+            <fileNamePattern>${logFileBase}.%d.log.gz</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${logEntryFormat}</pattern>
+        </encoder>
+    </appender>
+    <logger name="com.dynacrongroup" level="${logLevel:-info}" additivity="false">
+        <appender-ref ref="applicationAppender"/>
+    </logger>
+
+    <!-- Spring log file -->
+    <property name="springLogFileBase" value="${logBase}/spring"/>
+    <appender name="springAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${springLogFileBase}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Log will rollover nightly (at midnight) -->
+            <fileNamePattern>${springLogFileBase}.%d.log.gz</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${logEntryFormat}</pattern>
+        </encoder>
+    </appender>
+    <logger name="org.springframework" level="${thirdPartyLogLevel:-info}" additivity="false">
+        <appender-ref ref="springAppender"/>
+    </logger>
+
+
+    <!-- Separate log file for non-Spring third-party log messages -->
+    <property name="thirdPartyLogFileBase" value="${logBase}/third-party"/>
+    <appender name="thirdParty" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${thirdPartyLogFileBase}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Log will rollover nightly (at midnight) -->
+            <fileNamePattern>${thirdPartyLogFileBase}.%d.log.gz</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${logEntryFormat}</pattern>
+        </encoder>
+    </appender>
+</configuration>

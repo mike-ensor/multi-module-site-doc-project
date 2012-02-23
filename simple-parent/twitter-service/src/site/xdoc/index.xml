@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+    <properties>
+        <title>Twitter Service | ${project.artifactId}</title>
+        <author email="user@company.com">John Doe</author>
+    </properties>
+
+    <!-- Optional HEAD element, which is copied as is into the XHTML <head> element -->
+    <head>
+        <title>${title}</title>
+        <meta content="this is Mike's site docs" name="description"/>
+    </head>
+
+    <body>
+        <!-- The body of the document contains a number of sections -->
+        <section name="section 1">
+            <h1>Twitter Service</h1>
+            <h2>SearchByName</h2>
+            <!-- Within sections, any XHTML can be used -->
+            <p>Searches by name (string)</p>
+            <!-- in addition to XHTML, any number of subsections can be within a section -->
+        </section>
+        <section name="other section">
+            <p>NOTE: This only pulls the last 7 days worth of twitter feeds</p>
+            <!-- You can also include preformatted source blocks in the document -->
+            <source>
+                @Autowired
+                private TwitterService twitterService;
+                ...
+                ...
+                List&lt;String&gt; tweets = twitterService.searchByName("mikeensor");
+                ...
+            </source>
+        </section>
+    </body>
+</document>

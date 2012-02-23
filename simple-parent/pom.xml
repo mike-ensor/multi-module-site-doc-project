@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>simple-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>Base parent for all modules</name>
+
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>cc.ensor.maven</groupId>
+        <version>0.01-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modules>
+        <module>twitter-service</module>
+    </modules>
+
+    <properties>
+        <maven-checkstyle-plugin.configLocation>../../code-analysis/checkstyle.xml</maven-checkstyle-plugin.configLocation>
+        <maven-pmd-plugin.configLocation>../../code-analysis/pmd.xml</maven-pmd-plugin.configLocation>
+    </properties>
+
+</project>

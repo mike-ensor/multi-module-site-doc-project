@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+    <properties>
+        <title>Mike's DOCs for ${project.artifactId}</title>
+        <author email="mike@elickconcepts.com">Mike!</author>
+    </properties>
+
+    <!-- Optional HEAD element, which is copied as is into the XHTML <head> element -->
+    <head>
+        <title>Mike's DOCs for ${project.artifactId} - Dupe??</title>
+        <meta content="this is Mike's site docs" name="description"/>
+    </head>
+
+    <body>
+
+        <!-- The body of the document contains a number of sections -->
+        <section name="section 1">
+
+            <h1>H1 content</h1>
+            <h2>H2 content</h2>
+            <h3>H3 content</h3>
+            <!-- Within sections, any XHTML can be used -->
+            <p>This is a paragraph inside of section 1</p>
+            <!-- in addition to XHTML, any number of subsections can be within a section -->
+            <subsection name="subsection 1">
+                <p>Subsection!</p>
+                <h3>An H3 inside of subsection</h3>
+            </subsection>
+        </section>
+        <section name="section 2">
+            <p>More paragraphs</p>
+        </section>
+
+        <section name="other section">
+            <p>This is how you run site documentation</p>
+            <!-- You can also include preformatted source blocks in the document -->
+            <source>
+                mvn clean site:run
+            </source>
+
+        </section>
+
+    </body>
+
+</document>

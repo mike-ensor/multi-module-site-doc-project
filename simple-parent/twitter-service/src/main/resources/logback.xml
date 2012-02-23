@@ -19,7 +19,7 @@
     <property name="logEntryFormat" value="%-12date{HH:mm:ss.SSS}  %-5level  %-40logger{40} -> %msg%n"/>
     <property name="logBase" value="${logBaseDir}/${application.name}"/>
 
-    <!-- com.dynacrongroup.* log file -->
+    <!-- cc.ensor.maven* log file -->
     <property name="logFileBase" value="${logBase}/application"/>
     <appender name="applicationAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${logFileBase}.log</file>
@@ -31,7 +31,7 @@
             <pattern>${logEntryFormat}</pattern>
         </encoder>
     </appender>
-    <logger name="com.dynacrongroup" level="${logLevel:-info}" additivity="false">
+    <logger name="cc.ensor.maven" level="${logLevel:-info}" additivity="false">
         <appender-ref ref="applicationAppender"/>
     </logger>
 

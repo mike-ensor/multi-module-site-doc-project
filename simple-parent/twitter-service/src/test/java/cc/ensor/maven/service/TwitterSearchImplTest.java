@@ -1,7 +1,7 @@
 package cc.ensor.maven.service;
 
-import cc.ensor.maven.service.twitter.TwitterResponse;
-import cc.ensor.maven.service.twitter.TwitterResult;
+import cc.ensor.maven.service.model.TwitterResponse;
+import cc.ensor.maven.service.model.TwitterResult;
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;
 import org.junit.Rule;
@@ -14,9 +14,7 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Matchers.contains;
-import static org.mockito.Matchers.eq;
+import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -24,7 +22,7 @@ public class TwitterSearchImplTest {
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
-    
+
     private TwitterSearch twitterSearch;
     private RestTemplate restTemplate;
 
@@ -49,7 +47,7 @@ public class TwitterSearchImplTest {
         List<TwitterResult> twitterResults = twitterSearch.searchByName(searchTerm);
         assertThat(twitterResults.get(0).getText(), is(searchResults));
     }
-    
+
     @Test
     public void RestClientException() {
         String exception = "Mocked Exception";

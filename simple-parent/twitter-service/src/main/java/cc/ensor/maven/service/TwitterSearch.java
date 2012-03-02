@@ -1,6 +1,6 @@
 package cc.ensor.maven.service;
 
-import cc.ensor.maven.service.twitter.TwitterResult;
+import cc.ensor.maven.service.model.TwitterResult;
 
 import java.util.List;
 

@@ -61,12 +61,23 @@
 
     </properties>
 
+    <issueManagement>
+        <url>https://github.com/mike-ensor/multi-module-site-doc-project/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.apache.maven.wagon</groupId>
                 <artifactId>wagon-ssh</artifactId>
                 <version>${plugin.wagon-ssh.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>twitter-status-webapp</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -79,7 +90,6 @@
     </dependencies>
 
     <build>
-
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -202,7 +212,22 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.5</version>
+                <configuration>
+                    <message>Building site for ${project.version}</message>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>${plugin.site.version}</version>
@@ -229,8 +254,9 @@
                             scm, plugin-management, modules, summary -->
                             <reports>
                                 <report>summary</report>
-                                <report>dependencies</report>
                                 <report>project-team</report>
+                                <report>dependencies</report>
+                                <report>issue-tracking</report>
                                 <report>scm</report>
                                 <report>modules</report>
                                 <report>plugins</report>
@@ -379,18 +405,21 @@
                         <!-- Project-wide thresholds -->
                         <!--<totalLineRate>90</totalLineRate>-->
                         <!--<totalBranchRate>90</totalBranchRate>-->
-                        <regexes>
-                            <regex>
-                                <pattern>cc.ensor.maven.service.twitter.*</pattern>
-                                <branchRate>0</branchRate>
-                                <lineRate>0</lineRate>
-                            </regex>
-                        </regexes>
+                        <!--<regexes>-->
+                        <!--<regex>-->
+                        <!--<pattern>cc.ensor.maven.service.model.*</pattern>-->
+                        <!--<branchRate>0</branchRate>-->
+                        <!--<lineRate>0</lineRate>-->
+                        <!--</regex>-->
+                        <!--</regexes>-->
                     </check>
                     <instrumentation>
                         <includes>
                             <include>**/*.class</include>
                         </includes>
+                        <excludes>
+                            <exclude>**/model/*.class</exclude>
+                        </excludes>
                     </instrumentation>
                 </configuration>
                 <executions>
@@ -489,6 +518,17 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.10</version>
+                <configuration>
+                    <scanIntervalSeconds>5</scanIntervalSeconds>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
+                </configuration>
             </plugin>
 
             <plugin>

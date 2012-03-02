@@ -1,6 +1,6 @@
 package cc.ensor.maven.service;
 
-import cc.ensor.maven.service.twitter.TwitterResult;
+import cc.ensor.maven.service.model.TwitterResult;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

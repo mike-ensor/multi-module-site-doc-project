@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+
+
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <!-- pick up twitter service -->
+    <import resource="classpath*:twitter-service-context.xml"/>
+
+    <!-- Message sources used for Message Bundles providing Localization and messages in views -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
+          p:basenames="classpath:cc/ensor/maven/web/messages/messages"
+          p:defaultEncoding="utf-8"
+          p:fallbackToSystemLocale="true"/>
+
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <!-- Converters go here...these are used instead of PropertyEditors, though, need one class for to and from string, kind of a pain...good idea to write a static factory -->
+            </set>
+        </property>
+    </bean>
+
+    <!-- Pickup @Controller annotations -->
+    <context:component-scan base-package="cc.ensor.maven.web.controller">
+        <context:include-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+    </context:component-scan>
+
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+
+    <!-- Turns on support for mapping requests to Spring MVC @Controller methods
+         Also registers default Formatters and Validators for use across all @Controllers -->
+    <mvc:annotation-driven validator="validator" conversion-service="conversionService"/>
+
+</beans>

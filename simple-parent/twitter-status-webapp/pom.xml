@@ -1,55 +1,72 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>twitter-service</artifactId>
-    <packaging>jar</packaging>
-    <name>Twitter Service</name>
+    <artifactId>twitter-status-webapp</artifactId>
+    <packaging>war</packaging>
+    <name>Twitter Status Webapp</name>
 
     <parent>
-        <groupId>cc.ensor.maven</groupId>
         <artifactId>simple-parent</artifactId>
+        <groupId>cc.ensor.maven</groupId>
         <version>0.01-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
-
     <properties>
+        <sitemesh.version>2.4.2</sitemesh.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>twitter-service</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
+            <groupId>opensymphony</groupId>
+            <artifactId>sitemesh</artifactId>
+            <version>${sitemesh.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+        </dependency>
+        <!-- Servlet and JSP -->
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-core</artifactId>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!--START Bean Validation Framework -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.0.0.GA</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>commons-logging</groupId>
                     <artifactId>commons-logging</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-aop</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-oxm</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>

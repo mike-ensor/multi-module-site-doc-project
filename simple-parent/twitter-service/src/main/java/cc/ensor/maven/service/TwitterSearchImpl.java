@@ -1,7 +1,7 @@
 package cc.ensor.maven.service;
 
-import cc.ensor.maven.service.twitter.TwitterResponse;
-import cc.ensor.maven.service.twitter.TwitterResult;
+import cc.ensor.maven.service.model.TwitterResponse;
+import cc.ensor.maven.service.model.TwitterResult;
 import com.google.common.base.Throwables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

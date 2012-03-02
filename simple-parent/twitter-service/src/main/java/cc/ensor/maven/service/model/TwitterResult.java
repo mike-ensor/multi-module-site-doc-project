@@ -1,4 +1,4 @@
-package cc.ensor.maven.service.twitter;
+package cc.ensor.maven.service.model;
 
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
@@ -31,7 +31,7 @@ public class TwitterResult {
     }
 
     public void setCreated_at(Date created_at) {
-        if(created_at!=null) {
+        if (created_at != null) {
             this.created_at = new Date(created_at.getTime());
         } else {
             this.created_at = null;

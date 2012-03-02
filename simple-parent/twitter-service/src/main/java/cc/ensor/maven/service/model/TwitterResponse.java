@@ -1,4 +1,4 @@
-package cc.ensor.maven.service.twitter;
+package cc.ensor.maven.service.model;
 
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;

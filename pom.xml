@@ -5,21 +5,39 @@
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <version>0.01-SNAPSHOT</version>
-    <name>Parent Pom</name>
+    <name>multi-module-site-doc-project</name>
+    <description>Builds a multi-module project and shows off an example on how to use docs</description>
     <url>${site.url}</url>
 
     <modules>
         <module>simple-parent</module>
     </modules>
 
-    <distributionManagement>
-        <site>
-            <id>site-docs</id>
-            <url>${site.url}/${project.artifactId}</url>
-        </site>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+    <!--<site>-->
+    <!--<id>site-docs</id>-->
+    <!--<url>${site.url}/${project.artifactId}</url>-->
+    <!--</site>-->
+    <!--</distributionManagement>-->
+
+    <developers>
+        <developer>
+            <name>Mike Ensor</name>
+            <email>mike@clickconcepts.com</email>
+            <organization>Click Concepts</organization>
+            <organizationUrl>http://www.ensor.cc</organizationUrl>
+            <roles>
+                <role>owner</role>
+                <role>architect</role>
+                <role>jokster</role>
+            </roles>
+        </developer>
+    </developers>
 
     <properties>
+        <repositoryName>${project.name}</repositoryName>
+        <repositoryOwner>mike-ensor</repositoryOwner>
+
         <site.url>file://${env.HOME}/sitedocs</site.url>
 
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -213,22 +231,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.5</version>
-                <configuration>
-                    <message>Building site for ${project.version}</message>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>${plugin.site.version}</version>
                 <dependencies>
@@ -383,6 +385,46 @@
                         <goals>
                             <goal>attach-descriptor</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.5</version>
+                <configuration>
+                    <message>Building site for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <merge>true</merge>
+                    <repositoryOwner>${repositoryOwner}</repositoryOwner>
+                    <repositoryName>${repositoryName}</repositoryName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>downloads-maven-plugin</artifactId>
+                <version>0.4</version>
+                <configuration>
+                    <description>Official ${project.name} build of the ${project.version} release</description>
+                    <override>true</override>
+                    <includeAttached>true</includeAttached>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>upload</goal>
+                        </goals>
+                        <phase>install</phase>
                     </execution>
                 </executions>
             </plugin>

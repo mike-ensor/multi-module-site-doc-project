@@ -3,7 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>twitter-service</artifactId>
     <packaging>jar</packaging>
-    <name>Twitter Service</name>
+    <name>${project.artifactId}</name>
+    <description>Twitter Service</description>
 
     <parent>
         <groupId>cc.ensor.maven</groupId>

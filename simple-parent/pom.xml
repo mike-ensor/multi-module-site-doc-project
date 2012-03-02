@@ -3,7 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>simple-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Base parent for all modules</name>
+    <name>${project.artifactId}</name>
+    <description>Simple Parent generating multiple modules</description>
 
     <parent>
         <artifactId>parent</artifactId>
@@ -191,4 +192,28 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.5</version>
+                <configuration>
+                    <message>Builiding ${project.artifactId}</message>
+                    <merge>true</merge>
+                    <repositoryOwner>${repositoryOwner}</repositoryOwner>
+                    <repositoryName>${repositoryName}/${project.artifactId}</repositoryName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
 </project>

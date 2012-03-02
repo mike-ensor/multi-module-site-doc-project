@@ -3,7 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>twitter-status-webapp</artifactId>
     <packaging>war</packaging>
-    <name>Twitter Status Webapp</name>
+    <name>${project.artifactId}</name>
+    <description>Twitter Status Webapp</description>
 
     <parent>
         <artifactId>simple-parent</artifactId>

@@ -35,6 +35,7 @@
     </developers>
 
     <properties>
+        <baseProjectName>multi-module-site-doc-project</baseProjectName>
         <repositoryName>${project.name}</repositoryName>
         <repositoryOwner>mike-ensor</repositoryOwner>
 
@@ -396,6 +397,7 @@
                 <configuration>
                     <message>Building site for ${project.version}</message>
                     <noJekyll>true</noJekyll>
+                    <!--<force>true</force>-->
                     <merge>true</merge>
                     <repositoryOwner>${repositoryOwner}</repositoryOwner>
                     <repositoryName>${repositoryName}</repositoryName>

@@ -201,8 +201,9 @@
                 <configuration>
                     <message>Builiding ${project.artifactId}</message>
                     <merge>true</merge>
+                    <path>../../../</path>
                     <repositoryOwner>${repositoryOwner}</repositoryOwner>
-                    <repositoryName>${repositoryName}/${project.artifactId}</repositoryName>
+                    <repositoryName>${baseProjectName}/${project.artifactId}</repositoryName>
                 </configuration>
                 <executions>
                     <execution>

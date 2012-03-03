@@ -6,7 +6,7 @@
     <properties>
         <title>Parent | ${project.artifactId}</title>
         <author email="mike@clickconcepts.com">Mike!</author>
-        <date>2/29/2012</date>
+        <date>2/1/2012</date>
     </properties>
 
     <!-- Optional HEAD element, which is copied as is into the XHTML <head> element -->

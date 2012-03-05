@@ -2,20 +2,20 @@
 
 <rss version="0.91">
   <channel>
-    <title>twitter-service - Checkstyle report</title>
-    <link>file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service</link>
-    <description>twitter-service - Checkstyle report</description>
+    <title>twitter-status-webapp - Checkstyle report</title>
+    <link>file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp</link>
+    <description>twitter-status-webapp - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2012</copyright>
     <item>
-      <title>File: 6,
+      <title>File: 5,
              Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
-            <link>file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html</link>
+            <link>file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp/checkstyle.html</link>
       <description>
-        <p>Click <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -29,7 +29,7 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.model.TwitterResult.java">cc/ensor/maven/service/model/TwitterResult.java</a>
+                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.TwitterControllerTest.java">cc/ensor/maven/web/controller/TwitterControllerTest.java</a>
                 </td>
                 <td>
                   0
@@ -43,7 +43,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.model.TwitterResponse.java">cc/ensor/maven/service/model/TwitterResponse.java</a>
+                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.model.TwitterPageModel.java">cc/ensor/maven/web/model/TwitterPageModel.java</a>
                 </td>
                 <td>
                   0
@@ -57,7 +57,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearchImplTest.java">cc/ensor/maven/service/TwitterSearchImplTest.java</a>
+                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.TwitterController.java">cc/ensor/maven/web/controller/TwitterController.java</a>
                 </td>
                 <td>
                   0
@@ -71,7 +71,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearch.java">cc/ensor/maven/service/TwitterSearch.java</a>
+                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.HomeController.java">cc/ensor/maven/web/controller/HomeController.java</a>
                 </td>
                 <td>
                   0
@@ -85,21 +85,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearchImpl.java">cc/ensor/maven/service/TwitterSearchImpl.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearchImplIT.java">cc/ensor/maven/service/TwitterSearchImplIT.java</a>
+                  <a href="file:///Users/tkmavl5/sitedocs/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.HomeControllerTest.java">cc/ensor/maven/web/controller/HomeControllerTest.java</a>
                 </td>
                 <td>
                   0

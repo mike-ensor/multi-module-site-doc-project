@@ -4,8 +4,8 @@
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
 
     <properties>
-        <title>Twitter Service | ${project.artifactId}</title>
-        <author email="user@company.com">John Doe</author>
+        <title>Twitter Service | ${projectName}</title>
+        <author email="mike@clickconcepts.com">Mike!</author>
     </properties>
 
     <!-- Optional HEAD element, which is copied as is into the XHTML <head> element -->

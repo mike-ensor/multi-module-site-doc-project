@@ -13,6 +13,12 @@
         <module>simple-parent</module>
     </modules>
 
+    <scm>
+        <connection>scm:git:ssh://${github.host}/${repositoryOwner}/${repositoryName}.git</connection>
+        <url>http://${github.host}/${repositoryOwner}/${repositoryName}</url>
+        <developerConnection>scm:git:ssh://${github.host}/${repositoryOwner}/${repositoryName}.git</developerConnection>
+    </scm>
+
     <!--<distributionManagement>-->
     <!--<site>-->
     <!--<id>site-docs</id>-->
@@ -35,11 +41,16 @@
     </developers>
 
     <properties>
+        <!-- Variables specifically for xdoc site plugin.  Variables cannot have a "." (lame) -->
+        <projectName>${project.name}</projectName>
+
+        <!-- hard coded so children can pull up this specific property -->
         <baseProjectName>multi-module-site-doc-project</baseProjectName>
         <repositoryName>${project.name}</repositoryName>
         <repositoryOwner>mike-ensor</repositoryOwner>
+        <github.host>github.com</github.host>
 
-        <site.url>file://${env.HOME}/sitedocs</site.url>
+        <site.url>http://${repositoryOwner}.github.com/${repositoryName}</site.url>
 
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
@@ -55,9 +66,10 @@
         <plugin.enforcer.version>1.0.1</plugin.enforcer.version>
         <plugin.javadoc.version>2.8.1</plugin.javadoc.version>
         <plugin.jxr.version>2.3</plugin.jxr.version>
-        <plugin.pmd-plugin.version>2.7</plugin.pmd-plugin.version>
+        <plugin.pmd-plugin.version>2.7.1</plugin.pmd-plugin.version>
         <plugin.release.version>2.2.2</plugin.release.version>
         <plugin.site.version>3.0</plugin.site.version>
+        <plugin.maven-changelog.version>2.2</plugin.maven-changelog.version>
         <plugin.source.version>2.1.2</plugin.source.version>
         <plugin.surefire.version>2.12</plugin.surefire.version>
         <plugin.failsafe.version>2.12</plugin.failsafe.version>
@@ -81,7 +93,7 @@
     </properties>
 
     <issueManagement>
-        <url>https://github.com/mike-ensor/multi-module-site-doc-project/issues</url>
+        <url>https://github.com/${repositoryOwner}/${repositoryName}/issues</url>
         <system>GitHub Issues</system>
     </issueManagement>
 
@@ -111,6 +123,11 @@
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-changelog-plugin</artifactId>
+                    <version>${plugin.maven-changelog.version}</version>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
@@ -246,6 +263,17 @@
                     <reportPlugins>
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-changelog-plugin</artifactId>
+                            <configuration>
+                                <type>range</type>
+                                <range>10</range>
+                                <displayFileDetailUrl>${project.scm.url}/tree/master/%FILE%</displayFileDetailUrl>
+                                <headingDateFormat>MM-dd-yyyy</headingDateFormat>
+                                <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+                            </configuration>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-project-info-reports-plugin</artifactId>
                             <configuration>
                                 <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
@@ -285,10 +313,9 @@
                             <artifactId>maven-pmd-plugin</artifactId>
                             <configuration>
                                 <skip>${pmd.skip}</skip>
-                                <!-- only 1.4 and 1.5 supported...putting 1.6 will default back to 1.4 -->
                                 <targetJdk>${maven.compiler.source}</targetJdk>
                                 <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-                                <minimumTokens>100</minimumTokens>
+                                <!--<minimumTokens>100</minimumTokens>-->
                                 <rulesets>
                                     <ruleset>${maven-pmd-plugin.configLocation}</ruleset>
                                 </rulesets>
@@ -343,10 +370,19 @@
                             <groupId>org.codehaus.mojo</groupId>
                             <artifactId>taglist-maven-plugin</artifactId>
                             <configuration>
-                                <encoding>UTF-8</encoding>
+                                <encoding>${project.build.sourceEncoding}</encoding>
                                 <sourceFileLocale>en</sourceFileLocale>
                                 <tagListOptions>
                                     <tagClasses>
+                                        <tagClass>
+                                            <displayName>Code sections needing review</displayName>
+                                            <tags>
+                                                <tag>
+                                                    <matchString>REVIEWREQUIRED</matchString>
+                                                    <matchType>exact</matchType>
+                                                </tag>
+                                            </tags>
+                                        </tagClass>
                                         <tagClass>
                                             <displayName>Todo Work</displayName>
                                             <tags>
@@ -397,10 +433,9 @@
                 <configuration>
                     <message>Building site for ${project.version}</message>
                     <noJekyll>true</noJekyll>
-                    <!--<force>true</force>-->
                     <merge>true</merge>
-                    <repositoryOwner>mike-ensor</repositoryOwner>
-                    <repositoryName>${project.name}</repositoryName>
+                    <repositoryOwner>${repositoryOwner}</repositoryOwner>
+                    <repositoryName>${repositoryName}</repositoryName>
                 </configuration>
                 <executions>
                     <execution>
@@ -547,7 +582,7 @@
                     <skip>${pmd.skip}</skip>
                     <targetJdk>${maven.compiler.source}</targetJdk>
                     <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-                    <minimumTokens>100</minimumTokens>
+                    <!--<minimumTokens>100</minimumTokens>-->
                     <rulesets>
                         <ruleset>${maven-pmd-plugin.configLocation}</ruleset>
                     </rulesets>

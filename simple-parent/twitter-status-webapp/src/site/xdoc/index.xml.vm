@@ -4,21 +4,28 @@
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
 
     <properties>
-        <title>Parent | ${project.artifactId}</title>
+        <title>Twitter Service | ${projectName}</title>
         <author email="mike@clickconcepts.com">Mike!</author>
-        <date>2/1/2012</date>
     </properties>
 
     <!-- Optional HEAD element, which is copied as is into the XHTML <head> element -->
     <head>
-        <title>Just a duplicate, but if you want the meta descriptions, you have to have title per XSD</title>
+        <title>${title}</title>
         <meta content="this is Mike's site docs" name="description"/>
     </head>
 
     <body>
         <!-- The body of the document contains a number of sections -->
         <section name="section 1">
-            <h1>Parent POM</h1>
+            <h1>Twitter Status Webapp</h1>
+            <h2>Provides Web interface utilizing sub-module "TwitterSearch"</h2>
+        </section>
+        <section name="other section">
+            <p>NOTE: This only pulls the last 7 days worth of twitter feeds</p>
+            <!-- You can also include preformatted source blocks in the document -->
+            <source>
+                http://localhost:8080/twitter/name
+            </source>
         </section>
     </body>
 </document>

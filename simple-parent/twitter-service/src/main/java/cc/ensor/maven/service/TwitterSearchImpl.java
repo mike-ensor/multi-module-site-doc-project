@@ -33,6 +33,7 @@ public class TwitterSearchImpl implements TwitterSearch {
         try {
             TwitterResponse object = restTemplate.getForObject(buildTwitterSearchURL(searchTerm), TwitterResponse.class);
             // for demo purposes, no error checking on response object
+            // TODO: Add some error checking
             return object.getResults();
         } catch (RestClientException e) {
             LOG.error("exception happened", e);
@@ -47,6 +48,7 @@ public class TwitterSearchImpl implements TwitterSearch {
     private String constructEncodedName(String searchTerm) {
         String encode = null;
         try {
+            // TODO: Make string a constant
             encode = URLEncoder.encode(searchTerm, "UTF-8");
         } catch (UnsupportedEncodingException e) {
             LOG.error("Problem encoding {}", searchTerm);

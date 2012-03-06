@@ -11,6 +11,7 @@ import org.springframework.validation.BeanPropertyBindingResult;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
@@ -63,6 +64,12 @@ public class TwitterControllerTest {
     public void testSearchByName() throws Exception {
         String results = controller.searchByName(new TwitterPageModel());
         assertThat(results, is("twitter/home"));
+    }
+
+    @Test
+    public void getBaseModel() {
+        TwitterPageModel pageModel = controller.getPageModel();
+        assertThat(pageModel, is(notNullValue()));
     }
 
     private TwitterResult twitterResult(String textResult) {

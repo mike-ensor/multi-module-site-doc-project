@@ -4,35 +4,41 @@
           xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
 
     <properties>
-        <title>Twitter Service | ${project.artifactId}</title>
-        <author email="user@company.com">John Doe</author>
+        <title>Mike's DOCs for ${projectName}</title>
+        <author email="mike@elickconcepts.com">Mike!</author>
     </properties>
 
     <!-- Optional HEAD element, which is copied as is into the XHTML <head> element -->
     <head>
-        <title>${title}</title>
+        <title>Mike's DOCs for ${projectName}</title>
         <meta content="this is Mike's site docs" name="description"/>
     </head>
 
     <body>
+
         <!-- The body of the document contains a number of sections -->
         <section name="section 1">
-            <h1>Twitter Service</h1>
-            <h2>SearchByName</h2>
+
+            <h1>H1 Title</h1>
+            <h2>H2 Subtitle</h2>
+            <h3>H3 sub-subtitle</h3>
             <!-- Within sections, any XHTML can be used -->
-            <p>Searches by name (string)</p>
+            <p>This is a paragraph inside of section 1</p>
             <!-- in addition to XHTML, any number of subsections can be within a section -->
+            <subsection name="Subsection 1">
+                <p>Subsection!</p>
+                <h3>An H3 inside of subsection</h3>
+            </subsection>
         </section>
+        <section name="section 2">
+            <p>More paragraphs</p>
+        </section>
+
         <section name="other section">
-            <p>NOTE: This only pulls the last 7 days worth of twitter feeds</p>
+            <p>This is how you run site documentation</p>
             <!-- You can also include preformatted source blocks in the document -->
             <source>
-                @Autowired
-                private TwitterService twitterService;
-                ...
-                ...
-                List&lt;String&gt; tweets = twitterService.searchByName("mikeensor");
-                ...
+                mvn clean site:run
             </source>
         </section>
     </body>

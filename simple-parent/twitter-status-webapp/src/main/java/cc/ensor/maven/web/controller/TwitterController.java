@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
+/**
+ * Primary controller for Twitter interaction.
+ */
 @Controller
 @RequestMapping(value = "/twitter")
 public class TwitterController {
@@ -29,6 +32,7 @@ public class TwitterController {
     public String searchByName_post(@Valid @ModelAttribute("model") TwitterPageModel model, BindingResult bindingResult) {
         String view = "twitter/home";
 
+        // REVIEWREQUIRED: Please look at this, this can be done better
         if (bindingResult.hasErrors()) {
             view = "twitter/home";
         } else {
@@ -39,7 +43,8 @@ public class TwitterController {
     }
 
     @ModelAttribute("model")
-    private TwitterPageModel getPageModel() {
+    @VisibleForTesting
+    TwitterPageModel getPageModel() {
         return new TwitterPageModel();
     }
 }

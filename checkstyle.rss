@@ -3,7 +3,7 @@
 <rss version="0.91">
   <channel>
     <title>multi-module-site-doc-project - Checkstyle report</title>
-    <link>file:///Users/tkmavl5/sitedocs</link>
+    <link>http://mike-ensor.github.com/multi-module-site-doc-project</link>
     <description>multi-module-site-doc-project - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2012</copyright>
@@ -13,9 +13,9 @@
              Warnings: 0,
              Infos: 0
       </title>
-            <link>file:///Users/tkmavl5/sitedocs/checkstyle.html</link>
+            <link>http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html</link>
       <description>
-        <p>Click <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -29,7 +29,7 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#cc.ensor.maven.service.model.TwitterResult.java">cc/ensor/maven/service/model/TwitterResult.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#cc.ensor.maven.service.model.TwitterResult.java">cc/ensor/maven/service/model/TwitterResult.java</a>
                 </td>
                 <td>
                   0
@@ -43,7 +43,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#-webapp.src.main.java.cc.ensor.maven.web.controller.TwitterController.java">-webapp/src/main/java/cc/ensor/maven/web/controller/TwitterController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#-webapp.src.main.java.cc.ensor.maven.web.controller.TwitterController.java">-webapp/src/main/java/cc/ensor/maven/web/controller/TwitterController.java</a>
                 </td>
                 <td>
                   0
@@ -57,7 +57,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#e.src.main.java.cc.ensor.maven.service.model.TwitterResult.java">e/src/main/java/cc/ensor/maven/service/model/TwitterResult.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#e.src.main.java.cc.ensor.maven.service.model.TwitterResult.java">e/src/main/java/cc/ensor/maven/service/model/TwitterResult.java</a>
                 </td>
                 <td>
                   0
@@ -71,7 +71,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#or.maven.service.TwitterSearchImpl.java">or/maven/service/TwitterSearchImpl.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#or.maven.service.TwitterSearchImpl.java">or/maven/service/TwitterSearchImpl.java</a>
                 </td>
                 <td>
                   0
@@ -85,7 +85,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.model.TwitterResponse.java">twitter-service/src/main/java/cc/ensor/maven/service/model/TwitterResponse.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.model.TwitterResponse.java">twitter-service/src/main/java/cc/ensor/maven/service/model/TwitterResponse.java</a>
                 </td>
                 <td>
                   0
@@ -99,7 +99,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.TwitterSearch.java">twitter-service/src/main/java/cc/ensor/maven/service/TwitterSearch.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.TwitterSearch.java">twitter-service/src/main/java/cc/ensor/maven/service/TwitterSearch.java</a>
                 </td>
                 <td>
                   0
@@ -113,7 +113,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#.java.cc.ensor.maven.web.controller.HomeController.java">/java/cc/ensor/maven/web/controller/HomeController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#.java.cc.ensor.maven.web.controller.HomeController.java">/java/cc/ensor/maven/web/controller/HomeController.java</a>
                 </td>
                 <td>
                   0
@@ -127,7 +127,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#or.maven.service.model.TwitterResponse.java">or/maven/service/model/TwitterResponse.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#or.maven.service.model.TwitterResponse.java">or/maven/service/model/TwitterResponse.java</a>
                 </td>
                 <td>
                   0
@@ -141,7 +141,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#cc.ensor.maven.web.controller.TwitterController.java">cc/ensor/maven/web/controller/TwitterController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#cc.ensor.maven.web.controller.TwitterController.java">cc/ensor/maven/web/controller/TwitterController.java</a>
                 </td>
                 <td>
                   0
@@ -155,7 +155,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#cc.ensor.maven.service.TwitterSearchImpl.java">cc/ensor/maven/service/TwitterSearchImpl.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#cc.ensor.maven.service.TwitterSearchImpl.java">cc/ensor/maven/service/TwitterSearchImpl.java</a>
                 </td>
                 <td>
                   0
@@ -169,7 +169,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#twitter-status-webapp.src.main.java.cc.ensor.maven.web.model.TwitterPageModel.java">twitter-status-webapp/src/main/java/cc/ensor/maven/web/model/TwitterPageModel.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#twitter-status-webapp.src.main.java.cc.ensor.maven.web.model.TwitterPageModel.java">twitter-status-webapp/src/main/java/cc/ensor/maven/web/model/TwitterPageModel.java</a>
                 </td>
                 <td>
                   0
@@ -183,7 +183,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#.java.cc.ensor.maven.web.controller.TwitterController.java">/java/cc/ensor/maven/web/controller/TwitterController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#.java.cc.ensor.maven.web.controller.TwitterController.java">/java/cc/ensor/maven/web/controller/TwitterController.java</a>
                 </td>
                 <td>
                   0
@@ -197,7 +197,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#cc.ensor.maven.web.controller.HomeController.java">cc/ensor/maven/web/controller/HomeController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#cc.ensor.maven.web.controller.HomeController.java">cc/ensor/maven/web/controller/HomeController.java</a>
                 </td>
                 <td>
                   0
@@ -211,7 +211,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#-webapp.src.main.java.cc.ensor.maven.web.model.TwitterPageModel.java">-webapp/src/main/java/cc/ensor/maven/web/model/TwitterPageModel.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#-webapp.src.main.java.cc.ensor.maven.web.model.TwitterPageModel.java">-webapp/src/main/java/cc/ensor/maven/web/model/TwitterPageModel.java</a>
                 </td>
                 <td>
                   0
@@ -225,7 +225,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#twitter-status-webapp.src.main.java.cc.ensor.maven.web.controller.TwitterController.java">twitter-status-webapp/src/main/java/cc/ensor/maven/web/controller/TwitterController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#twitter-status-webapp.src.main.java.cc.ensor.maven.web.controller.TwitterController.java">twitter-status-webapp/src/main/java/cc/ensor/maven/web/controller/TwitterController.java</a>
                 </td>
                 <td>
                   0
@@ -239,7 +239,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#or.maven.service.TwitterSearch.java">or/maven/service/TwitterSearch.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#or.maven.service.TwitterSearch.java">or/maven/service/TwitterSearch.java</a>
                 </td>
                 <td>
                   0
@@ -253,7 +253,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#.java.cc.ensor.maven.web.model.TwitterPageModel.java">/java/cc/ensor/maven/web/model/TwitterPageModel.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#.java.cc.ensor.maven.web.model.TwitterPageModel.java">/java/cc/ensor/maven/web/model/TwitterPageModel.java</a>
                 </td>
                 <td>
                   0
@@ -267,7 +267,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#or.maven.service.model.TwitterResult.java">or/maven/service/model/TwitterResult.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#or.maven.service.model.TwitterResult.java">or/maven/service/model/TwitterResult.java</a>
                 </td>
                 <td>
                   0
@@ -281,7 +281,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#e.src.main.java.cc.ensor.maven.service.TwitterSearch.java">e/src/main/java/cc/ensor/maven/service/TwitterSearch.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#e.src.main.java.cc.ensor.maven.service.TwitterSearch.java">e/src/main/java/cc/ensor/maven/service/TwitterSearch.java</a>
                 </td>
                 <td>
                   0
@@ -295,7 +295,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#-webapp.src.main.java.cc.ensor.maven.web.controller.HomeController.java">-webapp/src/main/java/cc/ensor/maven/web/controller/HomeController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#-webapp.src.main.java.cc.ensor.maven.web.controller.HomeController.java">-webapp/src/main/java/cc/ensor/maven/web/controller/HomeController.java</a>
                 </td>
                 <td>
                   0
@@ -309,7 +309,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#twitter-status-webapp.src.main.java.cc.ensor.maven.web.controller.HomeController.java">twitter-status-webapp/src/main/java/cc/ensor/maven/web/controller/HomeController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#twitter-status-webapp.src.main.java.cc.ensor.maven.web.controller.HomeController.java">twitter-status-webapp/src/main/java/cc/ensor/maven/web/controller/HomeController.java</a>
                 </td>
                 <td>
                   0
@@ -323,7 +323,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#cc.ensor.maven.web.model.TwitterPageModel.java">cc/ensor/maven/web/model/TwitterPageModel.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#cc.ensor.maven.web.model.TwitterPageModel.java">cc/ensor/maven/web/model/TwitterPageModel.java</a>
                 </td>
                 <td>
                   0
@@ -337,7 +337,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#cc.ensor.maven.service.model.TwitterResponse.java">cc/ensor/maven/service/model/TwitterResponse.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#cc.ensor.maven.service.model.TwitterResponse.java">cc/ensor/maven/service/model/TwitterResponse.java</a>
                 </td>
                 <td>
                   0
@@ -351,7 +351,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#cc.ensor.maven.service.TwitterSearch.java">cc/ensor/maven/service/TwitterSearch.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#cc.ensor.maven.service.TwitterSearch.java">cc/ensor/maven/service/TwitterSearch.java</a>
                 </td>
                 <td>
                   0
@@ -365,7 +365,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.TwitterSearchImpl.java">twitter-service/src/main/java/cc/ensor/maven/service/TwitterSearchImpl.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.TwitterSearchImpl.java">twitter-service/src/main/java/cc/ensor/maven/service/TwitterSearchImpl.java</a>
                 </td>
                 <td>
                   0
@@ -379,7 +379,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#e.src.main.java.cc.ensor.maven.service.model.TwitterResponse.java">e/src/main/java/cc/ensor/maven/service/model/TwitterResponse.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#e.src.main.java.cc.ensor.maven.service.model.TwitterResponse.java">e/src/main/java/cc/ensor/maven/service/model/TwitterResponse.java</a>
                 </td>
                 <td>
                   0
@@ -393,7 +393,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.model.TwitterResult.java">twitter-service/src/main/java/cc/ensor/maven/service/model/TwitterResult.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#twitter-service.src.main.java.cc.ensor.maven.service.model.TwitterResult.java">twitter-service/src/main/java/cc/ensor/maven/service/model/TwitterResult.java</a>
                 </td>
                 <td>
                   0
@@ -407,7 +407,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/checkstyle.html#e.src.main.java.cc.ensor.maven.service.TwitterSearchImpl.java">e/src/main/java/cc/ensor/maven/service/TwitterSearchImpl.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/checkstyle.html#e.src.main.java.cc.ensor.maven.service.TwitterSearchImpl.java">e/src/main/java/cc/ensor/maven/service/TwitterSearchImpl.java</a>
                 </td>
                 <td>
                   0

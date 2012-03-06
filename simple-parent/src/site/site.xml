@@ -19,7 +19,7 @@
             <item name="Mike's Blog" href="http://www.ensor.cc/"/>
         </links>
         <menu name="Reactor">
-            <item name="Parent" href="/multi-module-site-doc-project/index.html"/>
+            <item name="Parent" href="../index.html"/>
         </menu>
         <menu name="Modules" ref="modules"/>
         <menu name="Reports" ref="reports"/>

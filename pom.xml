@@ -399,8 +399,8 @@
                     <noJekyll>true</noJekyll>
                     <!--<force>true</force>-->
                     <merge>true</merge>
-                    <repositoryOwner>${repositoryOwner}</repositoryOwner>
-                    <repositoryName>${repositoryName}</repositoryName>
+                    <repositoryOwner>mike-ensor</repositoryOwner>
+                    <repositoryName>${project.name}</repositoryName>
                 </configuration>
                 <executions>
                     <execution>

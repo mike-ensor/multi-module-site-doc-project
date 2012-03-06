@@ -19,8 +19,7 @@
             <item name="Mike's Blog" href="http://www.ensor.cc/"/>
         </links>
         <menu name="Reactor">
-            <!-- FIGURE THIS OUT!!! -->
-            <item name="Parent" href="${project.parent.artifactId}/"/>
+            <item name="Parent" href="/multi-module-site-doc-project/index.html"/>
         </menu>
         <menu name="Modules" ref="modules"/>
         <menu name="Reports" ref="reports"/>

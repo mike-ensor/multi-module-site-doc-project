@@ -19,12 +19,12 @@
         <developerConnection>scm:git:ssh://${github.host}/${repositoryOwner}/${repositoryName}.git</developerConnection>
     </scm>
 
-    <!--<distributionManagement>-->
-    <!--<site>-->
-    <!--<id>site-docs</id>-->
-    <!--<url>${site.url}/${project.artifactId}</url>-->
-    <!--</site>-->
-    <!--</distributionManagement>-->
+    <distributionManagement>
+        <site>
+            <id>site-docs</id>
+            <url>${site.url}/${project.artifactId}</url>
+        </site>
+    </distributionManagement>
 
     <developers>
         <developer>
@@ -35,7 +35,7 @@
             <roles>
                 <role>owner</role>
                 <role>architect</role>
-                <role>jokster</role>
+                <role>beer safety tester</role>
             </roles>
         </developer>
     </developers>
@@ -46,11 +46,8 @@
 
         <!-- hard coded so children can pull up this specific property -->
         <baseProjectName>multi-module-site-doc-project</baseProjectName>
-        <repositoryName>${project.name}</repositoryName>
-        <repositoryOwner>mike-ensor</repositoryOwner>
-        <github.host>github.com</github.host>
 
-        <site.url>http://${repositoryOwner}.github.com/${repositoryName}</site.url>
+        <site.url>file://${env.HOME}/sitedocs/${project.artifactId}</site.url>
 
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
@@ -89,6 +86,11 @@
         <findbugs.skip>false</findbugs.skip>
         <javadocs.skip>false</javadocs.skip>
         <pmd.skip>false</pmd.skip>
+
+        <!-- Cannot be project variable based because they are inherited by each module; must be hard-coded -->
+        <repositoryName>multi-module-site-doc-project</repositoryName>
+        <repositoryOwner>mike-ensor</repositoryOwner>
+        <github.host>github.com</github.host>
 
     </properties>
 
@@ -427,46 +429,6 @@
             </plugin>
 
             <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.5</version>
-                <configuration>
-                    <message>Building site for ${project.version}</message>
-                    <noJekyll>true</noJekyll>
-                    <merge>true</merge>
-                    <repositoryOwner>${repositoryOwner}</repositoryOwner>
-                    <repositoryName>${repositoryName}</repositoryName>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site</phase>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>downloads-maven-plugin</artifactId>
-                <version>0.4</version>
-                <configuration>
-                    <description>Official ${project.name} build of the ${project.version} release</description>
-                    <override>true</override>
-                    <includeAttached>true</includeAttached>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>upload</goal>
-                        </goals>
-                        <phase>install</phase>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <configuration>
@@ -481,6 +443,7 @@
                         <!-- Per-class thresholds -->
                         <lineRate>70</lineRate>
                         <branchRate>70</branchRate>
+                        <!-- POSSIBLE RESTRICTIONS FOR COVERAGE -->
                         <!-- Project-wide thresholds -->
                         <!--<totalLineRate>90</totalLineRate>-->
                         <!--<totalBranchRate>90</totalBranchRate>-->
@@ -645,7 +608,10 @@
                             <rules>
                                 <requireProperty>
                                     <property>java.16.home</property>
-                                    <message>Required java.16.home property not defined. Typically found in settings.xml
+                                    <!-- JUST ADD A PROPERTY CALLED java.16.home to this POM or your settings.xml file -->
+                                    <!-- Intention is to show off the enforcer plugin make sure that there is a specific property set -->
+                                    <message>Required 'java.16.home' property not defined. Typically found in
+                                        settings.xml
                                     </message>
                                 </requireProperty>
                             </rules>
@@ -689,6 +655,84 @@
                         <configuration>
                             <skip>true</skip>
                         </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>github-site-docs</id>
+            <properties>
+                <site.url>http://${repositoryOwner}.github.com/${repositoryName}</site.url>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>enforce-property</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                                <configuration>
+                                    <rules>
+                                        <requireProperty>
+                                            <property>github.global.userName</property>
+                                            <message>Please set github username property</message>
+                                        </requireProperty>
+                                        <requireProperty>
+                                            <property>github.global.password</property>
+                                            <message>Please set github password property</message>
+                                        </requireProperty>
+                                    </rules>
+                                    <fail>true</fail>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>site-maven-plugin</artifactId>
+                        <version>0.5</version>
+                        <configuration>
+                            <message>Building site for ${project.version}</message>
+                            <noJekyll>true</noJekyll>
+                            <merge>true</merge>
+                            <repositoryOwner>${repositoryOwner}</repositoryOwner>
+                            <repositoryName>${repositoryName}</repositoryName>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <phase>site</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>downloads-maven-plugin</artifactId>
+                        <version>0.4</version>
+                        <configuration>
+                            <description>Official ${project.name} build of the ${project.version} release</description>
+                            <override>true</override>
+                            <includeAttached>true</includeAttached>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>upload</goal>
+                                </goals>
+                                <phase>install</phase>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>

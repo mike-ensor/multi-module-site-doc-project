@@ -3,7 +3,7 @@
 <rss version="0.91">
   <channel>
     <title>twitter-status-webapp - Checkstyle report</title>
-    <link>file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp</link>
+    <link>http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp</link>
     <description>twitter-status-webapp - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2012</copyright>
@@ -13,9 +13,9 @@
              Warnings: 0,
              Infos: 0
       </title>
-            <link>file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp/checkstyle.html</link>
+            <link>http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp/checkstyle.html</link>
       <description>
-        <p>Click <a href="file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -29,7 +29,7 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.TwitterControllerTest.java">cc/ensor/maven/web/controller/TwitterControllerTest.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.TwitterControllerTest.java">cc/ensor/maven/web/controller/TwitterControllerTest.java</a>
                 </td>
                 <td>
                   0
@@ -43,7 +43,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.model.TwitterPageModel.java">cc/ensor/maven/web/model/TwitterPageModel.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.model.TwitterPageModel.java">cc/ensor/maven/web/model/TwitterPageModel.java</a>
                 </td>
                 <td>
                   0
@@ -57,7 +57,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.TwitterController.java">cc/ensor/maven/web/controller/TwitterController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.TwitterController.java">cc/ensor/maven/web/controller/TwitterController.java</a>
                 </td>
                 <td>
                   0
@@ -71,7 +71,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.HomeController.java">cc/ensor/maven/web/controller/HomeController.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.HomeController.java">cc/ensor/maven/web/controller/HomeController.java</a>
                 </td>
                 <td>
                   0
@@ -85,7 +85,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="file:///Users/tkmavl5/sitedocs/twitter-status-webapp/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.HomeControllerTest.java">cc/ensor/maven/web/controller/HomeControllerTest.java</a>
+                  <a href="http://mike-ensor.github.com/multi-module-site-doc-project/simple-parent/twitter-status-webapp/checkstyle.html#cc.ensor.maven.web.controller.HomeControllerTest.java">cc/ensor/maven/web/controller/HomeControllerTest.java</a>
                 </td>
                 <td>
                   0

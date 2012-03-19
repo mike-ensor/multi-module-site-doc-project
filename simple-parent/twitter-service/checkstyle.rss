@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>twitter-service - Checkstyle report</title>
+    <link>file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service</link>
+    <description>twitter-service - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2012</copyright>
+    <item>
+      <title>File: 6,
+             Errors: 0,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html</link>
+      <description>
+        <p>Click <a href="file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.model.TwitterResult.java">cc/ensor/maven/service/model/TwitterResult.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.model.TwitterResponse.java">cc/ensor/maven/service/model/TwitterResponse.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearchImplTest.java">cc/ensor/maven/service/TwitterSearchImplTest.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearch.java">cc/ensor/maven/service/TwitterSearch.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearchImpl.java">cc/ensor/maven/service/TwitterSearchImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="file:///Users/tkmavl5/sitedocs/twitter-service/simple-parent/twitter-service/checkstyle.html#cc.ensor.maven.service.TwitterSearchImplIT.java">cc/ensor/maven/service/TwitterSearchImplIT.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
